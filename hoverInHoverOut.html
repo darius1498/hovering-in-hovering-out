@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hover In Hover Out</title>
+		<link rel="stylesheet" type="text/css" href="hiho.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+
+				var swap = function () {
+				    var temp = $(this).attr('data-alt-src');
+				    $(this).attr('data-alt-src', $(this).attr('src'));
+				    $(this).attr('src', temp);
+				}
+				$('img').hover(swap, swap);
+
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+			<img src="ghost1.gif" data-alt-src="ghost3.gif">
+			<img src="ghost2.gif" data-alt-src="ghost3.gif">
+			<img src="ghost1.gif" data-alt-src="ghost3.gif">
+			<img src="ghost2.gif" data-alt-src="ghost3.gif">
+		</div>
+		<div>
+			<img src="ghost1.gif" data-alt-src="ghost3.gif">
+			<img src="ghost2.gif" data-alt-src="ghost3.gif">
+			<img src="ghost1.gif" data-alt-src="ghost3.gif">
+			<img src="ghost2.gif" data-alt-src="ghost3.gif">
+		</div>
+	</body>
+</html>
